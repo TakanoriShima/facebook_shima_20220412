@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body style="background: url(images/gray.jpg);">
         <div class="container">
             <div class="row mt-3">
                 <h1 class="col-sm-12 text-center text-primary pb-1">ログイン</h1>
@@ -31,9 +31,9 @@
                         </div>
                     </div>
                     <!-- 1行 -->
-                    <div class="mb-3 row mt-3">
+                    <div class="row mt-5 mb-5">
                         <div class="offset-2 col-10 row">
-                            <button type="submit" class="col-sm-12 btn btn-primary">ログイン</button>
+                            <button type="submit" class="offset-2 col-sm-7 btn btn-primary">ログイン</button>
                         </div>
                     </div>
                     <input type="hidden" name="_token" value="<?= $token ?>">
@@ -41,7 +41,7 @@
             </div>
             
             <div class="row mt-3">
-                <a href="index.php" class=" offset-sm-3 col-sm-6 btn btn-danger">トップページに戻る</a>
+                <a href="index.php" class=" offset-sm-5 col-sm-3 btn btn-danger">トップページに戻る</a>
             </div>
         </div>
             

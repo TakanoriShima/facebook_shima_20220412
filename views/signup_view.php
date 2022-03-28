@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body style="background: url(images/gray.jpg);">
         <div class="container">
             <div class="row mt-3">
                 <h1 class="col-sm-12 text-center text-primary pb-1">新規会員登録</h1>
@@ -18,7 +18,7 @@
                 <form class="col-sm-12" action="users_store.php" method="POST" enctype="multipart/form-data">
                     <!-- 1行 -->
                     <div class="mb-3 row">
-                        <label class="col-2 col-form-label">名前</label>
+                        <label class="col-2 col-form-label">⓵ 名前</label>
                         <div class="col-10">
                             <input type="text" class="form-control" name="name" value="<?= $user->name ?>">
                         </div>
@@ -26,7 +26,7 @@
                     
                     <!-- 1行 -->
                     <div class="mb-3 row">
-                        <label class="col-2 col-form-label">メールアドレス</label>
+                        <label class="col-2 col-form-label">⓶ メールアドレス</label>
                         <div class="col-10">
                             <input type="email" class="form-control" name="email" value="<?= $user->email ?>">
                         </div>
@@ -34,7 +34,7 @@
                     
                     <!-- 1行 -->
                     <div class="mb-3 row">
-                        <label class="col-2 col-form-label">パスワード</label>
+                        <label class="col-2 col-form-label">⓷ パスワード</label>
                         <div class="col-10">
                             <input type="password" class="form-control" name="password">
                         </div>
@@ -42,16 +42,16 @@
                     
                      <!-- 1行 -->
                     <div class="mb-3 row">
-                        <label class="col-2 col-form-label">画像</label>
+                        <label class="col-2 col-form-label">⓸ 画像</label>
                         <div class="col-10">
                             <input type="file" class="form-control" name="image">
                         </div>
                     </div>
                     
                     <!-- 1行 -->
-                    <div class="mb-3 row mt-3">
+                    <div class="row mt-5 mb-5">
                         <div class="offset-2 col-10 row">
-                            <button type="submit" class="col-sm-12 btn btn-primary">登録</button>
+                            <button type="submit" class="offset-2 col-sm-7 btn btn-primary">登録</button>
                         </div>
                     </div>
                     <input type="hidden" name="_token" value="<?= $token ?>">
@@ -59,7 +59,7 @@
             </div>
             
             <div class="row mt-3">
-                <a href="index.php" class=" offset-sm-3 col-sm-6 btn btn-danger">トップページに戻る</a>
+                <a href="index.php" class=" offset-sm-5 col-sm-3 btn btn-danger">トップページに戻る</a>
             </div>
         </div>
             
