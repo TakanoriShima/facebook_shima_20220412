@@ -4,6 +4,10 @@
     height: 350px;
     border-radius: 20px;
 }
+
+.icon {
+    width: 100%;
+}
 /*media query*/
 /*ref)*/
 /*https://www.seojuku.com/blog/responsive-mediaquery.html*/
