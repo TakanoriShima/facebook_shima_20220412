@@ -30,8 +30,10 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <a href="signup.php" class="offset-2 col-sm-3 btn btn-primary">会員登録</a>
-                <a href="login.php" class="offset-2 col-sm-3 btn btn-danger">ログイン</a>
+                <a href="signup.php" class="col-sm-12 btn btn-primary">会員登録</a>
+            </div>
+            <div class="row mt-3">
+                <a href="login.php" class="col-sm-12 mt-2 btn btn-danger">ログイン</a>
             </div>
         </div>
     </body>
