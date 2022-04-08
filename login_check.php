@@ -17,7 +17,7 @@
     } else {
         // ログイン画面に戻る
         // リダイレクト(C) => (C)
-        $_SESSION['errors'] = array('ログインに失敗しました');
+        $_SESSION['errors'] = array('※ログインに失敗しました');
         header('Location: login.php');
         exit;
     }

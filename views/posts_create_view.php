@@ -19,7 +19,7 @@
                 <form class="col-sm-12" action="posts_store.php" method="POST" enctype="multipart/form-data">
                     <!-- 1行 -->
                     <div class="mb-3 row">
-                        <label class="col-2 col-form-label">⓵ タイトル</label>
+                        <label class="col-2 col-form-label">タイトル</label>
                         <div class="col-10">
                             <input type="text" class="form-control" name="title" value="<?= $post->title ?>">
                         </div>
@@ -27,7 +27,7 @@
                     
                     <!-- 1行 -->
                     <div class="mb-3 row">
-                        <label class="col-2 col-form-label">⓶ 内容</label>
+                        <label class="col-2 col-form-label">内容</label>
                         <div class="col-10">
                             <input type="text" class="form-control" name="content" value="<?= $post->content ?>">
                         </div>
@@ -35,7 +35,7 @@
                     
                      <!-- 1行 -->
                     <div class="mb-3 row">
-                        <label class="col-2 col-form-label">⓷ 画像</label>
+                        <label class="col-2 col-form-label">画像</label>
                         <div class="col-10">
                             <input type="file" class="form-control" name="image">
                         </div>
@@ -43,11 +43,10 @@
                     
                     <!-- 1行 -->
                     <div class="row mt-5 mb-5">
-                        <div class="offset-2 col-10 row">
-                            <button type="submit" class="offset-2 col-sm-7 btn btn-primary">新規投稿</button>
-                        </div>
+                        <button type="submit" class="offset-sm-3 col-sm-6 btn btn-primary">新規投稿</button>
                     </div>
                     <input type="hidden" name="_token" value="<?= $token ?>">
+                    
                 </form>
                 
             </div>

@@ -21,14 +21,14 @@
     <body style="background: url(images/gray.jpg);">
         <?php include_once 'views/_navbar_view.php'; ?>
         <div class="container p-2">
-            <div class="row mt-2">
+            <div class="row mt-3 mb-3">
                 <h1 class="col-sm-12 text-center text-primary">投稿一覧</h1>
             </div>
             <?php include_once 'views/_flush_view.php'; ?>
             <div class="row mt-2">
                 <?php if(count($posts) !== 0) : ?>
                 <table class="table table-bordered table-striped">
-                    <tr>
+                    <tr class="text-center">
                         <th>投稿番号</th>
                         <th>投稿者名</th>
                         <th>タイトル</th>
@@ -37,7 +37,7 @@
                         <th>投稿日時</th>
                     </tr>
                     <?php foreach($posts as $post): ?>
-                    <tr>
+                    <tr class="text-center">
                         <td><a href="posts_show.php?id=<?= $post->id ?>"><?= $post->id ?></a></td>
                         <td><?= $post->name ?></td>
                         <td><?= $post->title ?></td>

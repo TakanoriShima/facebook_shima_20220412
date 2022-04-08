@@ -23,16 +23,16 @@
         public function validate(){
             $errors = array();
             if($this->name === '') {
-                $errors[] = '名前を入力してください';
+                $errors[] = '※名前を入力してください';
             }
             if($this->email === '') {
-                $errors[] = 'メールアドレスを入力してください';
+                $errors[] = '※メールアドレスを入力してください';
             }
             if(mb_strlen($this->password) < 5) {
-                $errors[] = 'パスワードは5文字以上で入力してください';
+                $errors[] = '※パスワードを5文字以上で入力してください';
             }
             if($this->image === '') {
-                $errors[] = '画像を選択してください';
+                $errors[] = '※画像を選択してください';
             }
             
             return $errors;

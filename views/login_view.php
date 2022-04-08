@@ -11,7 +11,7 @@
     <body style="background: url(images/gray.jpg);">
         <div class="container">
             <div class="row mt-3">
-                <h1 class="col-sm-12 text-center text-primary pb-1">ログイン</h1>
+                <h1 class="col-sm-12 text-center text-primary pb-1 mt-3 mb-3">ログイン</h1>
             </div>
             <?php include_once 'views/_errors_view.php';?>
             <div class="row mt-3">
@@ -24,24 +24,22 @@
                         </div>
                     </div>
                     <!-- 1行 -->
-                    <div class="mb-3 row">
+                    <div class="row">
                         <label class="col-2 col-form-label">パスワード</label>
                         <div class="col-10">
                             <input type="password" class="form-control" name="password">
                         </div>
                     </div>
                     <!-- 1行 -->
-                    <div class="row mt-5 mb-5">
-                        <div class="offset-2 col-10 row">
-                            <button type="submit" class="offset-2 col-sm-7 btn btn-primary">ログイン</button>
-                        </div>
+                    <div class="row mt-5">
+                            <button type="submit" class="offset-sm-3 col-sm-6 btn btn-primary">ログイン</button>
                     </div>
                     <input type="hidden" name="_token" value="<?= $token ?>">
                 </form>
             </div>
             
-            <div class="row mt-3">
-                <a href="index.php" class=" offset-sm-5 col-sm-3 btn btn-danger">トップページに戻る</a>
+            <div class="row mt-5">
+                <a href="index.php" class=" offset-sm-3 col-sm-6 btn btn-danger">トップページに戻る</a>
             </div>
         </div>
             
