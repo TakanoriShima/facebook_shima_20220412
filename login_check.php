@@ -1,12 +1,10 @@
 <?php
     require_once 'filters/csrf_filter.php';
     require_once 'models/User.php';
-    // var_dump($_POST);
     $email = $_POST['email'];
     $password = $_POST['password'];
     // 入力されたら値を持ったユーザーがいるかDBを探す。
     $user = User::login($email, $password);
-    // var_dump($user);
     // そんなユーザーがDBに存在するならば
     if($user !== false) {
         // ログイン処理

@@ -22,7 +22,10 @@
         <?php include_once 'views/_navbar_view.php'; ?>
         <div class="container p-2">
             <div class="row mt-3 mb-3">
-                <h1 class="col-sm-12 text-center text-primary">投稿一覧</h1>
+                <h1 class="col-sm-12 text-center text-primary"><?= $login_user->name ?>さんのMyPage</h1>
+            </div>
+            <div class="row mt-3 mb-3">
+                <h2 class="col-sm-12 text-center text-success">投稿一覧</h2>
             </div>
             <?php include_once 'views/_flush_view.php'; ?>
             <div class="row mt-2">
@@ -37,7 +40,7 @@
                     </tr>
                     <?php foreach($posts as $post): ?>
                     <tr class="text-center">
-                        <td><a href="posts_show.php?id=<?= $login_user->id ?>"><?= $login_user->id ?></a></td>
+                        <td><a href="posts_show.php?id=<?= $post->id ?>"><?= $post->id ?></a></td>
                         <td><?= $post->title ?></td>
                         <td><?= $post->content ?></td>
                         <td><img src="uploads/posts/<?= $post->image ?>" alt="<?= $post->image ?>" class="post_img"></td>
@@ -49,7 +52,7 @@
                 <h2 class="col-sm-12 text-center text-danger">投稿はまだありません</h2>
                 <?php endif; ?>
             </div>
-            
+
         </div>
     </body>
-</html>
+</html> 
