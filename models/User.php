@@ -151,7 +151,7 @@
                 $stmt->execute();
                 // フェッチの結果を、Postクラスのインスタンスにマッピングする
                 $stmt->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Post');
-                $posts = $stmt->fetch();
+                $posts = $stmt->fetchAll();
                 self::close_connection($pdo, $stmt);
                 // Postクラスのインスタンスを返す
                 return $posts;
