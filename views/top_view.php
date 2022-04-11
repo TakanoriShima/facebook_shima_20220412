@@ -38,7 +38,7 @@
                     </tr>
                     <?php foreach($posts as $post): ?>
                     <tr class="text-center">
-                        <td><a href="posts_show.php?id=<?= $post->id ?>"><?= $post->id ?></a></td>
+                        <td><a href="posts_public_show.php?id=<?= $post->id ?>" id="id"><?= $post->id ?></a></td>
                         <td><?= $post->name ?></td>
                         <td><?= $post->title ?></td>
                         <td><?= $post->content ?></td>

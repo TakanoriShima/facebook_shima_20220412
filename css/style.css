@@ -21,3 +21,14 @@
     font-weight: bold;
     list-style: none;
 }
+
+/* 投稿番号のクリックを分かりやすくする(mypage_view.php) */
+#id {
+    padding: 10px;
+}
+
+#id:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #008080;
+}

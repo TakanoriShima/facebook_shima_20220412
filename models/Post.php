@@ -23,13 +23,13 @@
         public function validate(){
             $errors = array();
             if($this->title === '') {
-                $errors[] = 'タイトルを入力してください';
+                $errors[] = '※タイトルを入力してください';
             }
             if($this->content === '') {
-                $errors[] = '内容を入力してください';
+                $errors[] = '※内容を入力してください';
             }
             if($this->image === '') {
-                $errors[] = '画像を選択してください';
+                $errors[] = '※画像を選択してください';
             }
             
             return $errors;
@@ -72,43 +72,21 @@
             }
         }
         
-        // ログイン判定メソッド
-        public static function login($email, $password){
-            try {
-                $pdo = self::get_connection($email, $password);
-                $stmt = $pdo->prepare("SELECT * FROM users WHERE email=:email AND password=:password");
-                // バインド処理
-                $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-                $stmt->bindParam(':password', $password, PDO::PARAM_STR);
-                // 実行
-                $stmt->execute();
-                // フェッチの結果を、Userクラスのインスタンスにマッピングする
-                $stmt->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'User');
-                $user = $stmt->fetch();
-                self::close_connection($pdo, $stmt);
-                // Userクラスのインスタンスを返す
-                return $user;
-                
-            } catch (PDOException $e) {
-                return 'PDO exception: ' . $e->getMessage();
-            }
-        }
-        
-        // 指定されたidからデータを1件取得するメソッド
+        // 指定されたidからPostデータを1件取得するメソッド
         public static function find($id){
             try {
                 $pdo = self::get_connection();
-                $stmt = $pdo->prepare("SELECT * FROM users WHERE id=:id");
+                $stmt = $pdo->prepare("SELECT * FROM posts WHERE id=:id");
                 // バインド処理
                 $stmt->bindParam(':id', $id, PDO::PARAM_INT);
                 // 実行
                 $stmt->execute();
-                // フェッチの結果を、Userクラスのインスタンスにマッピングする
-                $stmt->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'User');
-                $user = $stmt->fetch();
+                // フェッチの結果を、Postクラスのインスタンスにマッピングする
+                $stmt->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Post');
+                $post = $stmt->fetch();
                 self::close_connection($pdo, $stmt);
-                // Userクラスのインスタンスを返す
-                return $user;
+                // Postクラスのインスタンスを返す
+                return $post;
                 
             } catch (PDOException $e) {
                 return 'PDO exception: ' . $e->getMessage();

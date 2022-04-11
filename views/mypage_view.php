@@ -40,7 +40,7 @@
                     </tr>
                     <?php foreach($posts as $post): ?>
                     <tr class="text-center">
-                        <td><a href="posts_show.php?id=<?= $post->id ?>"><?= $post->id ?></a></td>
+                        <td><a href="posts_show.php?id=<?= $post->id ?>" id="id"><?= $post->id ?></a></td>
                         <td><?= $post->title ?></td>
                         <td><?= $post->content ?></td>
                         <td><img src="uploads/posts/<?= $post->image ?>" alt="<?= $post->image ?>" class="post_img"></td>
