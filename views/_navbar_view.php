@@ -9,7 +9,7 @@
 
     <!-- メニュー項目 -->
     <div class="collapse navbar-collapse" id="nav-bar">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav" id="nav">
             <li class="nav-item"><a href="posts_create.php" class="nav-link">新規投稿</a></li>
             <li class="nav-item"><a href="mypage.php" class="nav-link">MyPage</a></li>
             <li class="nav-item"><a href="top.php" class="nav-link">投稿一覧</a></li>

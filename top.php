@@ -2,9 +2,9 @@
     //(C)
     require_once 'filters/login_filter.php';
     require_once 'models/Post.php';
-    // $posts = array();
+    // 投稿データを全部取得するstaticメソッド
     $posts = Post::all();
-    // var_dump($posts);
+
     $flush = $_SESSION['flush'];
     $_SESSION['flush'] = null;
   

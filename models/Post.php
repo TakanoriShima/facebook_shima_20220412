@@ -19,6 +19,7 @@
             $this->content = $content;
             $this->image = $image;
         }
+        
         // 入力値を検証するメソッド
         public function validate(){
             $errors = array();
@@ -52,7 +53,7 @@
             }
         }
         
-        // データを1件登録するメソッド
+        // Postインスタンスを1件登録するメソッド
         public function save(){
             try {
                 $pdo = self::get_connection();
@@ -72,7 +73,7 @@
             }
         }
         
-        // 指定されたidからPostデータを1件取得するメソッド
+        // 指定されたidからPostインスタンスを1件取得するメソッド
         public static function find($id){
             try {
                 $pdo = self::get_connection();
@@ -116,4 +117,20 @@
             }
         }
         
+        // 投稿一件をMySQLから削除するメソッド
+        public function delete() {
+            try {
+                $pdo = self::get_connection();
+                $stmt = $pdo->prepare("DELETE FROM posts WHERE id=:id");
+                // バインド処理
+                $stmt->bindParam(':id', $this->id, PDO::PARAM_INT);
+                // 実行
+                $stmt->execute();
+                self::close_connection($pdo, $stmt);
+                return " 投稿番号" . $this->id . "の投稿を削除しました";
+                
+            } catch (PDOException $e) {
+                return '';
+            }
+        }
     }

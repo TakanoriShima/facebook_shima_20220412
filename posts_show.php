@@ -5,8 +5,9 @@
     $id = $_GET['id'];
     // GET通信で飛んできたidからPostインスタンスを復元
     $post = Post::find($id);
-    // var_dump($post);
+    $token = session_id();
     
     $flush = $_SESSION['flush'];
     $_SESSION['flush'] = null;
+    
     include_once 'views/posts_show_view.php';

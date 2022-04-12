@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>投稿番号<?=$post->id ?>の投稿編集</title>
+        <title>投稿番号<?= $login_user->id ?>の投稿編集</title>
         <link rel="icon" href="images/favicon.ico">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
@@ -12,7 +12,7 @@
         <?php include_once 'views/_navbar_view.php'; ?>
         <div class="container">
             <div class="row mt-3">
-                <h1 class="col-sm-12 text-center text-primary pb-1">投稿番号<?=$post->id ?>の編集</h1>
+                <h1 class="col-sm-12 text-center text-primary pb-1">投稿番号<?= $login_user->id ?>の編集</h1>
             </div>
             <?php include_once 'views/_errors_view.php';?>
             <div class="row mt-3">

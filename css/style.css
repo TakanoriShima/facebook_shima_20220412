@@ -15,7 +15,6 @@
     width: 100px;
 }
 
-
 /* エラーメッセージ */
 #errors {
     font-weight: bold;
@@ -24,11 +23,13 @@
 
 /* 投稿番号のクリックを分かりやすくする(mypage_view.php) */
 #id {
+    font-weight: bold;
+    text-decoration: underline;
     padding: 10px;
 }
 
 #id:hover {
-    text-decoration: none;
     color: #fff;
     background: #008080;
+    text-decoration: none;
 }
