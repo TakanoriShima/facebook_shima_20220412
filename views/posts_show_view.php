@@ -24,6 +24,7 @@
             <div class="row mt-3 mb-3">
                 <h1 class="col-sm-12 text-center text-primary"><?= $login_user->name ?>さんの投稿番号<?= $post->id ?>の詳細</h1>
             </div>
+            <?php include_once 'views/_flush_view.php'; ?>
             <div class="row mt-2">
                 <table class="table table-bordered table-striped">
                     <tr class="text-center">
@@ -43,7 +44,7 @@
                 </table>
             </div>
             <div class="row mt-5">
-                <a href="posts_edit.php" class="offset-sm-3 col-sm-5 btn btn-success">編集</a>
+                <a href="posts_edit.php?id=<?= $post->id ?>" class="offset-sm-3 col-sm-5 btn btn-success">編集</a>
                 <form class="offset-sm-2 col-sm-6 mt-5 row" action="posts_destroy.php" method="POST">
                     <input type="hidden" name="id" value="<?= $post->id ?>"/>
                     <input type="hidden" name="_token" value="<?= $token ?>"/>

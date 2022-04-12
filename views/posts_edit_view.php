@@ -16,7 +16,7 @@
             </div>
             <?php include_once 'views/_errors_view.php';?>
             <div class="row mt-3">
-                <form class="col-sm-12" action="posts_store.php" method="POST" enctype="multipart/form-data">
+                <form class="col-sm-12" action="posts_update.php" method="POST" enctype="multipart/form-data">
                     <!-- 1行 -->
                     <div class="mb-3 row">
                         <label class="col-2 col-form-label">タイトル</label>
@@ -45,6 +45,7 @@
                     <div class="row mt-5 mb-5">
                         <button type="submit" class="offset-sm-3 col-sm-6 btn btn-primary">更新</button>
                     </div>
+                    <input type="hidden" name="id" value="<?= $post->id ?>">
                     <input type="hidden" name="_token" value="<?= $token ?>">
                     
                 </form>

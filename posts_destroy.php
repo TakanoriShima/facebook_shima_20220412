@@ -15,6 +15,6 @@
     $_SESSION['flush'] = $flush;
     
     // リダイレクト
-    header('Location top.php');
+    header('Location: top.php');
     exit;
     
